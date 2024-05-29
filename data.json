@@ -1,0 +1,872 @@
+[
+{
+    "model": "fin_manager_app.category",
+    "pk": 1,
+    "fields": {
+        "name": "Groceries"
+    }
+},
+{
+    "model": "fin_manager_app.category",
+    "pk": 2,
+    "fields": {
+        "name": "Data"
+    }
+},
+{
+    "model": "fin_manager_app.category",
+    "pk": 3,
+    "fields": {
+        "name": "Fuel"
+    }
+},
+{
+    "model": "fin_manager_app.category",
+    "pk": 4,
+    "fields": {
+        "name": "Clothing"
+    }
+},
+{
+    "model": "fin_manager_app.category",
+    "pk": 5,
+    "fields": {
+        "name": "Savings"
+    }
+},
+{
+    "model": "fin_manager_app.category",
+    "pk": 6,
+    "fields": {
+        "name": "Investment"
+    }
+},
+{
+    "model": "fin_manager_app.category",
+    "pk": 7,
+    "fields": {
+        "name": "Mortgage"
+    }
+},
+{
+    "model": "fin_manager_app.category",
+    "pk": 8,
+    "fields": {
+        "name": "Miscellaneous"
+    }
+},
+{
+    "model": "fin_manager_app.category",
+    "pk": 9,
+    "fields": {
+        "name": "Cosmetics"
+    }
+},
+{
+    "model": "fin_manager_app.category",
+    "pk": 10,
+    "fields": {
+        "name": "Family Expenses"
+    }
+},
+{
+    "model": "fin_manager_app.income",
+    "pk": "0262fd8b-fe1f-4de6-a3c3-756851796c21",
+    "fields": {
+        "user": 1,
+        "amount": "22.00",
+        "source": "SALARY",
+        "date": "2024-05-21"
+    }
+},
+{
+    "model": "fin_manager_app.income",
+    "pk": "17152633-01cb-48d2-af82-bd5fc7bda7f5",
+    "fields": {
+        "user": 1,
+        "amount": "1500.00",
+        "source": "SALARY",
+        "date": "2024-05-26"
+    }
+},
+{
+    "model": "fin_manager_app.income",
+    "pk": "29b04910-3f10-4e54-bc55-14616187f62d",
+    "fields": {
+        "user": 1,
+        "amount": "120.00",
+        "source": "GIFTS",
+        "date": "2024-05-20"
+    }
+},
+{
+    "model": "fin_manager_app.income",
+    "pk": "2a2f4217-0fde-4dbe-8612-dfaff2229bc5",
+    "fields": {
+        "user": 1,
+        "amount": "50.00",
+        "source": "OTHERS",
+        "date": "2024-05-20"
+    }
+},
+{
+    "model": "fin_manager_app.income",
+    "pk": "375d50f7-21dd-4500-875f-39fdfe23eb0b",
+    "fields": {
+        "user": 1,
+        "amount": "300.00",
+        "source": "SALARY",
+        "date": "2024-05-20"
+    }
+},
+{
+    "model": "fin_manager_app.income",
+    "pk": "3b0fba97-6dcc-4f08-8c36-654cc9a564ac",
+    "fields": {
+        "user": 1,
+        "amount": "120.00",
+        "source": "SALARY",
+        "date": "2024-05-21"
+    }
+},
+{
+    "model": "fin_manager_app.income",
+    "pk": "43237d46-c51a-4489-a1db-d9362797466e",
+    "fields": {
+        "user": 1,
+        "amount": "25.01",
+        "source": "SALARY",
+        "date": "2024-05-21"
+    }
+},
+{
+    "model": "fin_manager_app.income",
+    "pk": "46aee9ef-c0f0-452d-9b80-8ee5d40e79eb",
+    "fields": {
+        "user": 1,
+        "amount": "150000.00",
+        "source": "SALARY",
+        "date": "2024-05-27"
+    }
+},
+{
+    "model": "fin_manager_app.income",
+    "pk": "4ed2c99f-14f8-4985-93a9-825166edf572",
+    "fields": {
+        "user": 1,
+        "amount": "20.00",
+        "source": "OTHERS",
+        "date": "2024-05-21"
+    }
+},
+{
+    "model": "fin_manager_app.income",
+    "pk": "4fd30dd3-35a8-4745-9a8a-adc041840d58",
+    "fields": {
+        "user": 1,
+        "amount": "25.01",
+        "source": "NONE",
+        "date": "2024-05-20"
+    }
+},
+{
+    "model": "fin_manager_app.income",
+    "pk": "568c1f7c-4c35-4a12-95af-0ec4576d34e4",
+    "fields": {
+        "user": 1,
+        "amount": "300.00",
+        "source": "ROI",
+        "date": "2024-05-22"
+    }
+},
+{
+    "model": "fin_manager_app.income",
+    "pk": "642a9cea-d729-41e1-8694-c7be2a26e372",
+    "fields": {
+        "user": 1,
+        "amount": "20000.00",
+        "source": "SALARY",
+        "date": "2024-05-20"
+    }
+},
+{
+    "model": "fin_manager_app.income",
+    "pk": "6c5d6fa3-8fff-40ab-a56f-23eca15c1412",
+    "fields": {
+        "user": 1,
+        "amount": "50.00",
+        "source": "OTHERS",
+        "date": "2024-05-20"
+    }
+},
+{
+    "model": "fin_manager_app.income",
+    "pk": "765ac6d9-430f-475c-b44b-3f2049f345ee",
+    "fields": {
+        "user": 1,
+        "amount": "105.00",
+        "source": "ROI",
+        "date": "2024-05-20"
+    }
+},
+{
+    "model": "fin_manager_app.income",
+    "pk": "76df6597-27cb-4cf5-a079-14ace8100a0b",
+    "fields": {
+        "user": 1,
+        "amount": "450.00",
+        "source": "OTHERS",
+        "date": "2024-05-26"
+    }
+},
+{
+    "model": "fin_manager_app.income",
+    "pk": "82cace5d-4018-4041-8078-39407b8ba71d",
+    "fields": {
+        "user": 1,
+        "amount": "200.00",
+        "source": "GIFTS",
+        "date": "2024-05-26"
+    }
+},
+{
+    "model": "fin_manager_app.income",
+    "pk": "82ee7168-712b-4085-a26b-8bd3719db195",
+    "fields": {
+        "user": 1,
+        "amount": "200.00",
+        "source": "SALARY",
+        "date": "2024-05-26"
+    }
+},
+{
+    "model": "fin_manager_app.income",
+    "pk": "89c7b5eb-a55f-4c8c-b780-31ed7bd9072b",
+    "fields": {
+        "user": 1,
+        "amount": "150.00",
+        "source": "SALARY",
+        "date": "2024-05-21"
+    }
+},
+{
+    "model": "fin_manager_app.income",
+    "pk": "8d516e6f-7f17-4677-9c36-fc858bf64cf2",
+    "fields": {
+        "user": 1,
+        "amount": "20000.00",
+        "source": "SALARY",
+        "date": "2024-05-20"
+    }
+},
+{
+    "model": "fin_manager_app.income",
+    "pk": "8e4701e7-6d03-4149-af82-61c8d506f003",
+    "fields": {
+        "user": 1,
+        "amount": "2.12",
+        "source": "GIFTS",
+        "date": "2024-05-20"
+    }
+},
+{
+    "model": "fin_manager_app.income",
+    "pk": "95d3ccb2-dacd-4a2d-b387-3d6e8ac50b58",
+    "fields": {
+        "user": 1,
+        "amount": "48.00",
+        "source": "GIFTS",
+        "date": "2024-05-23"
+    }
+},
+{
+    "model": "fin_manager_app.income",
+    "pk": "a6bd50dc-1536-4b4e-bc4e-8058b92ac216",
+    "fields": {
+        "user": 1,
+        "amount": "300.00",
+        "source": "GIFTS",
+        "date": "2024-05-21"
+    }
+},
+{
+    "model": "fin_manager_app.income",
+    "pk": "b0582279-291b-4108-b006-79ae7f017856",
+    "fields": {
+        "user": 1,
+        "amount": "300.00",
+        "source": "SALARY",
+        "date": "2024-05-20"
+    }
+},
+{
+    "model": "fin_manager_app.income",
+    "pk": "b13a980d-d694-44c5-8a9e-c96f9b388dda",
+    "fields": {
+        "user": 1,
+        "amount": "250.00",
+        "source": "GIFTS",
+        "date": "2024-05-20"
+    }
+},
+{
+    "model": "fin_manager_app.income",
+    "pk": "c4e5e842-bac9-4521-9c81-ac6e93a8b607",
+    "fields": {
+        "user": 1,
+        "amount": "10.00",
+        "source": "SALARY",
+        "date": "2024-05-21"
+    }
+},
+{
+    "model": "fin_manager_app.income",
+    "pk": "c72bcd6b-3fd7-4e53-91b1-3de78d3a168a",
+    "fields": {
+        "user": 1,
+        "amount": "300.00",
+        "source": "SALARY",
+        "date": "2024-05-20"
+    }
+},
+{
+    "model": "fin_manager_app.income",
+    "pk": "d4eac523-c692-43bb-9207-4a1aea0ba03a",
+    "fields": {
+        "user": 1,
+        "amount": "25.01",
+        "source": "SALARY",
+        "date": "2024-05-21"
+    }
+},
+{
+    "model": "fin_manager_app.income",
+    "pk": "e2af33d9-cd1b-44c9-8f26-5f5e885d77a2",
+    "fields": {
+        "user": 1,
+        "amount": "200000.00",
+        "source": "SALARY",
+        "date": "2024-05-26"
+    }
+},
+{
+    "model": "fin_manager_app.income",
+    "pk": "e2b36ffd-8c39-42f2-a07c-dcea2f635ab8",
+    "fields": {
+        "user": 1,
+        "amount": "200.00",
+        "source": "SALARY",
+        "date": "2024-05-26"
+    }
+},
+{
+    "model": "fin_manager_app.income",
+    "pk": "f54b8df7-98a1-4743-b606-58e96c2118b4",
+    "fields": {
+        "user": 1,
+        "amount": "32.00",
+        "source": "NONE",
+        "date": "2024-05-20"
+    }
+},
+{
+    "model": "fin_manager_app.income",
+    "pk": "f68ce59d-263a-4bd3-9c34-9af67fe3b629",
+    "fields": {
+        "user": 1,
+        "amount": "120.00",
+        "source": "GIFTS",
+        "date": "2024-05-20"
+    }
+},
+{
+    "model": "fin_manager_app.income",
+    "pk": "fbf00c29-5ac6-4421-b5dd-7c6a680d27f4",
+    "fields": {
+        "user": 1,
+        "amount": "32.00",
+        "source": "NONE",
+        "date": "2024-05-20"
+    }
+},
+{
+    "model": "fin_manager_app.expense",
+    "pk": "0115d1f3-486c-4fd5-8e54-3e0ee0a4248b",
+    "fields": {
+        "user": 1,
+        "amount": "20.54",
+        "category": 2,
+        "item_name": "Milks",
+        "date_incurred": "2024-05-20",
+        "description": "some few groceries"
+    }
+},
+{
+    "model": "fin_manager_app.expense",
+    "pk": "0425baee-0bce-4352-9f9e-83225028c24f",
+    "fields": {
+        "user": 1,
+        "amount": "120.00",
+        "category": 1,
+        "item_name": "Milkshake",
+        "date_incurred": "2024-05-21",
+        "description": "some groceries"
+    }
+},
+{
+    "model": "fin_manager_app.expense",
+    "pk": "044605d7-f449-4b75-8960-c47202cab0d4",
+    "fields": {
+        "user": 1,
+        "amount": "2450.00",
+        "category": 1,
+        "item_name": "mmklmlk",
+        "date_incurred": "2024-05-26",
+        "description": "jnikk"
+    }
+},
+{
+    "model": "fin_manager_app.expense",
+    "pk": "0fc1f468-3002-4604-aaa7-5b4e6f7775b7",
+    "fields": {
+        "user": 1,
+        "amount": "85.00",
+        "category": 4,
+        "item_name": "T-Shirt",
+        "date_incurred": "2024-05-20",
+        "description": "1 T-Shirt"
+    }
+},
+{
+    "model": "fin_manager_app.expense",
+    "pk": "17ed0d56-bece-4dce-9655-436d26ac1e35",
+    "fields": {
+        "user": 1,
+        "amount": "1.00",
+        "category": 1,
+        "item_name": "mmklmlk",
+        "date_incurred": "2024-05-26",
+        "description": "jnikk"
+    }
+},
+{
+    "model": "fin_manager_app.expense",
+    "pk": "2135fe81-b69a-40ad-bcef-386ec72f1816",
+    "fields": {
+        "user": 1,
+        "amount": "25.01",
+        "category": 1,
+        "item_name": "Meat",
+        "date_incurred": "2024-05-21",
+        "description": "Some weird stuff"
+    }
+},
+{
+    "model": "fin_manager_app.expense",
+    "pk": "25f4cc8d-55bf-4d35-9132-2b54bfb72037",
+    "fields": {
+        "user": 1,
+        "amount": "250.00",
+        "category": 1,
+        "item_name": "A bottle of coke",
+        "date_incurred": "2024-05-21",
+        "description": "some other stuff"
+    }
+},
+{
+    "model": "fin_manager_app.expense",
+    "pk": "264c7aef-a4a8-46fb-a94f-dabb2bc32398",
+    "fields": {
+        "user": 1,
+        "amount": "1500.00",
+        "category": 1,
+        "item_name": "Some like that",
+        "date_incurred": "2024-05-26",
+        "description": "gyuhguihio"
+    }
+},
+{
+    "model": "fin_manager_app.expense",
+    "pk": "2e4b38f1-455a-4307-bc5b-5a8d8ad41b7d",
+    "fields": {
+        "user": 1,
+        "amount": "1.00",
+        "category": 1,
+        "item_name": "mmklmlk",
+        "date_incurred": "2024-05-26",
+        "description": "jnikk"
+    }
+},
+{
+    "model": "fin_manager_app.expense",
+    "pk": "2f6baff9-4508-4c22-ba64-a0e5fc90f8cc",
+    "fields": {
+        "user": 1,
+        "amount": "55.85",
+        "category": 2,
+        "item_name": "5 cups of Milks",
+        "date_incurred": "2024-05-20",
+        "description": "some few groceries"
+    }
+},
+{
+    "model": "fin_manager_app.expense",
+    "pk": "33bb298a-28a0-4ad6-a0ff-479dde5cd3af",
+    "fields": {
+        "user": 1,
+        "amount": "1500.00",
+        "category": 1,
+        "item_name": "bjkjnjn",
+        "date_incurred": "2024-05-26",
+        "description": "yuhi"
+    }
+},
+{
+    "model": "fin_manager_app.expense",
+    "pk": "48609e13-19da-47fc-ab94-692abfc2f893",
+    "fields": {
+        "user": 1,
+        "amount": "120.00",
+        "category": 1,
+        "item_name": "Meat",
+        "date_incurred": "2024-05-21",
+        "description": "Some stuff"
+    }
+},
+{
+    "model": "fin_manager_app.expense",
+    "pk": "534a0689-2628-4868-a897-f736d5c16e7b",
+    "fields": {
+        "user": 1,
+        "amount": "368.00",
+        "category": 1,
+        "item_name": "MTN data",
+        "date_incurred": "2024-05-26",
+        "description": "fgh yuguih iuh"
+    }
+},
+{
+    "model": "fin_manager_app.expense",
+    "pk": "57b4c7b5-e9df-4096-80f5-0c2f422218ff",
+    "fields": {
+        "user": 1,
+        "amount": "30000.00",
+        "category": 1,
+        "item_name": "iu8ui8uj",
+        "date_incurred": "2024-05-26",
+        "description": "hgyuhhujhij"
+    }
+},
+{
+    "model": "fin_manager_app.expense",
+    "pk": "6025c485-150a-44c8-bf51-bbdc3c4f352e",
+    "fields": {
+        "user": 1,
+        "amount": "1.00",
+        "category": 1,
+        "item_name": "mmklmlk",
+        "date_incurred": "2024-05-26",
+        "description": "jnikk"
+    }
+},
+{
+    "model": "fin_manager_app.expense",
+    "pk": "60faff65-4433-403d-a46b-4a4d3c14033b",
+    "fields": {
+        "user": 1,
+        "amount": "15000.00",
+        "category": 1,
+        "item_name": "xrdtrfuijol",
+        "date_incurred": "2024-05-26",
+        "description": "jijoiokok"
+    }
+},
+{
+    "model": "fin_manager_app.expense",
+    "pk": "66b1ad59-a668-4530-8e6c-fec779d644a9",
+    "fields": {
+        "user": 1,
+        "amount": "15200.00",
+        "category": 1,
+        "item_name": "xdstryui",
+        "date_incurred": "2024-05-26",
+        "description": "xzdfxdfg"
+    }
+},
+{
+    "model": "fin_manager_app.expense",
+    "pk": "67b3f5f6-2cdb-4b84-97e7-77ed782b511d",
+    "fields": {
+        "user": 1,
+        "amount": "30000.00",
+        "category": 1,
+        "item_name": "iu8ui8uj",
+        "date_incurred": "2024-05-26",
+        "description": "hgyuhhujhij"
+    }
+},
+{
+    "model": "fin_manager_app.expense",
+    "pk": "691ce5a7-c650-4c7c-8c6e-adf045c60ed1",
+    "fields": {
+        "user": 1,
+        "amount": "280.00",
+        "category": 1,
+        "item_name": "djskhf",
+        "date_incurred": "2024-05-26",
+        "description": "jdf oisdjf"
+    }
+},
+{
+    "model": "fin_manager_app.expense",
+    "pk": "791c2043-65e5-46fa-a3f4-e8e2a04f72ae",
+    "fields": {
+        "user": 1,
+        "amount": "30000.00",
+        "category": 1,
+        "item_name": "iu8ui8uj",
+        "date_incurred": "2024-05-26",
+        "description": "hgyuhhujhij"
+    }
+},
+{
+    "model": "fin_manager_app.expense",
+    "pk": "8c775300-3527-49f9-87f0-6b2a45ee2203",
+    "fields": {
+        "user": 1,
+        "amount": "5000.00",
+        "category": 3,
+        "item_name": "jsdknif jksdnv",
+        "date_incurred": "2024-05-26",
+        "description": "ksdjio"
+    }
+},
+{
+    "model": "fin_manager_app.expense",
+    "pk": "94c8765d-b3b8-4401-ba6c-4609eac3273c",
+    "fields": {
+        "user": 1,
+        "amount": "38870.00",
+        "category": 1,
+        "item_name": "djskhf",
+        "date_incurred": "2024-05-26",
+        "description": "jdf oisdjf"
+    }
+},
+{
+    "model": "fin_manager_app.expense",
+    "pk": "9d8ba0bf-cbdc-4105-9f51-b4e7b9db8044",
+    "fields": {
+        "user": 1,
+        "amount": "120.00",
+        "category": 1,
+        "item_name": "Cheese",
+        "date_incurred": "2024-05-21",
+        "description": "Something"
+    }
+},
+{
+    "model": "fin_manager_app.expense",
+    "pk": "a5e7d733-9fcd-40d4-9dbb-f6e0fff4e16a",
+    "fields": {
+        "user": 1,
+        "amount": "1.00",
+        "category": 1,
+        "item_name": "mmklmlk",
+        "date_incurred": "2024-05-26",
+        "description": "jnikk"
+    }
+},
+{
+    "model": "fin_manager_app.expense",
+    "pk": "a70d7969-83fb-4b3c-a8c9-5775fb8f6d76",
+    "fields": {
+        "user": 1,
+        "amount": "368.00",
+        "category": 2,
+        "item_name": "Deduct 368",
+        "date_incurred": "2024-05-26",
+        "description": "Deduct 368 from totl budger"
+    }
+},
+{
+    "model": "fin_manager_app.expense",
+    "pk": "b122a7d3-4d46-45f9-ab3f-161314bf1294",
+    "fields": {
+        "user": 1,
+        "amount": "1.00",
+        "category": 1,
+        "item_name": "mmklmlk",
+        "date_incurred": "2024-05-26",
+        "description": "jnikk"
+    }
+},
+{
+    "model": "fin_manager_app.expense",
+    "pk": "b1e899a1-d1f3-4fd3-af7a-44d6fe579a5d",
+    "fields": {
+        "user": 1,
+        "amount": "2.12",
+        "category": 1,
+        "item_name": "Milk",
+        "date_incurred": "2024-05-20",
+        "description": "some groceries"
+    }
+},
+{
+    "model": "fin_manager_app.expense",
+    "pk": "bce47650-5aa6-41f1-bd20-3472dd88eebc",
+    "fields": {
+        "user": 1,
+        "amount": "250.00",
+        "category": 1,
+        "item_name": "Cheese",
+        "date_incurred": "2024-05-21",
+        "description": "Another weird stuff say Cheese"
+    }
+},
+{
+    "model": "fin_manager_app.expense",
+    "pk": "bf01f0b7-8230-4aea-b4cc-c920e40c32c2",
+    "fields": {
+        "user": 1,
+        "amount": "280.00",
+        "category": 1,
+        "item_name": "djskhf",
+        "date_incurred": "2024-05-26",
+        "description": "jdf oisdjf"
+    }
+},
+{
+    "model": "fin_manager_app.expense",
+    "pk": "c637f7f3-40c2-4add-a6a6-3fd54a86249d",
+    "fields": {
+        "user": 1,
+        "amount": "25.00",
+        "category": 2,
+        "item_name": "domain name",
+        "date_incurred": "2024-05-23",
+        "description": "for a domain"
+    }
+},
+{
+    "model": "fin_manager_app.expense",
+    "pk": "cd9d7903-848e-44b9-89d6-9aa3db4e9c2d",
+    "fields": {
+        "user": 1,
+        "amount": "30000.00",
+        "category": 1,
+        "item_name": "iu8ui8uj",
+        "date_incurred": "2024-05-26",
+        "description": "hgyuhhujhij"
+    }
+},
+{
+    "model": "fin_manager_app.expense",
+    "pk": "cea80a72-c860-44a2-aaff-467f4096016a",
+    "fields": {
+        "user": 1,
+        "amount": "30000.00",
+        "category": 1,
+        "item_name": "iu8ui8uj",
+        "date_incurred": "2024-05-26",
+        "description": "hgyuhhujhij"
+    }
+},
+{
+    "model": "fin_manager_app.expense",
+    "pk": "d2d174e2-396f-4bae-a15a-21251ef8bf53",
+    "fields": {
+        "user": 1,
+        "amount": "30000.00",
+        "category": 1,
+        "item_name": "iu8ui8uj",
+        "date_incurred": "2024-05-26",
+        "description": "hgyuhhujhij"
+    }
+},
+{
+    "model": "fin_manager_app.expense",
+    "pk": "da9f3bf2-caf9-4ddb-a7c4-4c95a0a57afe",
+    "fields": {
+        "user": 1,
+        "amount": "30000.00",
+        "category": 1,
+        "item_name": "iu8ui8uj",
+        "date_incurred": "2024-05-26",
+        "description": "hgyuhhujhij"
+    }
+},
+{
+    "model": "fin_manager_app.expense",
+    "pk": "dada3bc8-c64d-4e24-8f78-bbcb6082d76f",
+    "fields": {
+        "user": 1,
+        "amount": "1.00",
+        "category": 1,
+        "item_name": "mmklmlk",
+        "date_incurred": "2024-05-26",
+        "description": "jnikk"
+    }
+},
+{
+    "model": "fin_manager_app.expense",
+    "pk": "dd917da5-eb56-42e1-884c-f375780519f6",
+    "fields": {
+        "user": 1,
+        "amount": "30000.00",
+        "category": 1,
+        "item_name": "iu8ui8uj",
+        "date_incurred": "2024-05-26",
+        "description": "hgyuhhujhij"
+    }
+},
+{
+    "model": "fin_manager_app.expense",
+    "pk": "e1ffe2b9-3d53-4f88-82b5-3fae338ea7b4",
+    "fields": {
+        "user": 1,
+        "amount": "2500.00",
+        "category": 1,
+        "item_name": "dsiufiowej",
+        "date_incurred": "2024-05-26",
+        "description": "hudshIOf sidjfiojws"
+    }
+},
+{
+    "model": "fin_manager_app.expense",
+    "pk": "e209f1c9-11bf-497d-b4f9-1c00be994de1",
+    "fields": {
+        "user": 1,
+        "amount": "5000.00",
+        "category": 1,
+        "item_name": "Some test amount",
+        "date_incurred": "2024-05-26",
+        "description": "Some test amount"
+    }
+},
+{
+    "model": "fin_manager_app.expense",
+    "pk": "fea0c57a-52ff-40ff-934d-2af4934e8981",
+    "fields": {
+        "user": 1,
+        "amount": "30000.00",
+        "category": 1,
+        "item_name": "iu8ui8uj",
+        "date_incurred": "2024-05-26",
+        "description": "hgyuhhujhij"
+    }
+},
+{
+    "model": "fin_manager_app.budget",
+    "pk": "82f136dc-788f-476d-83b8-2a0242b55c90",
+    "fields": {
+        "user": 1,
+        "total_budget": "35860.63",
+        "position": "SURPLUS",
+        "total_expenses": "0.00",
+        "remaining_income": "0.00",
+        "date": "2024-05-20"
+    }
+}
+]
