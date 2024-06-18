@@ -1,0 +1,27 @@
+.login-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-field{
+    background-color: antiquewhite;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 2px 15px 18px rgb(184, 180, 175);
+}
+
+.form-field:hover {
+    background-color: antiquewhite;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 2px 15px 18px rgb(174, 240, 234);
+    transition: 100ms ;
+}
+
+.form-control input{
+    width: 20rem;
+    height: 30px;
+    font-weight: bold;
+    padding: 2px;
+}

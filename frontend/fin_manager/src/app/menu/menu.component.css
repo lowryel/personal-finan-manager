@@ -1,0 +1,35 @@
+.nav-bar{
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+    margin: 5px;
+}
+
+
+ .nav-elements a{
+    text-decoration: none;
+    color: black;
+    margin: 10px;
+ }
+
+ .nav-elements a:hover {
+    text-decoration: underline rgb(156, 170, 156) 2px;
+    transition: 300ms ease-in;
+ }
+
+section{
+    margin: 10px;
+}
+
+@media screen and (max-width: 600px){
+    .nav-bar {
+        margin: 5px;
+        align-items: end;
+        background-color: rgb(165, 179, 179);
+    }
+    ul.nav-elements{
+        margin: 20px;
+        overflow: scroll;
+        scroll-behavior: smooth;
+    }
+}

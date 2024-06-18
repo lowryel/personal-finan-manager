@@ -56,6 +56,8 @@ INSTALLED_APPS = [
     "dj_rest_auth.registration",
     "fin_manager_app",
     "user",
+
+    "corsheaders",
 ]
 
 SITE_ID = 1
@@ -63,12 +65,12 @@ SITE_ID = 1
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    
+    "corsheaders.middleware.CorsMiddleware", # CORS middleware
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
-
-    "allauth.account.middleware.AccountMiddleware", # allauth middleware
-
+    "allauth.account.middleware.AccountMiddleware",  # allauth middleware
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
@@ -78,16 +80,17 @@ ROOT_URLCONF = "fin_manager.urls"
 
 REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES": [
-        "rest_framework.permissions.AllowAny",
-        "rest_framework_simplejwt.authentication.JWTAuthentication",
+        # "rest_framework.permissions.AllowAny",
+        # "rest_framework_simplejwt.authentication.JWTAuthentication",
     ],
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 4
+    'PAGE_SIZE': 50
 }
 
 
 CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1']
 
+CORS_ORIGIN_ALLOW_ALL = True
 
 TEMPLATES = [
     {
@@ -172,9 +175,7 @@ STATIC_ROOT="fin_manager_app/static"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-SIMPLE_JWT = {
-    "AUTH_HEADER_TYPES": ("BEARER",),
-}
+ACCOUNT_EMAIL_VERIFICATION = 'none'  # disable sending verification email on registration
 
 
 SIMPLE_JWT = {
@@ -182,3 +183,5 @@ SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": datetime.timedelta(minutes=10),
     "REFRESH_TOKEN_LIFETIME": datetime.timedelta(hours=24),
 }
+
+USE_JWT=True

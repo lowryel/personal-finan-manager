@@ -6,7 +6,7 @@
 * Had to change the DB during development from sqlite3 (default django) to Postgres.
 * Since I didn't want to start all over with data, I backed up the data using 
     `python manage.py dumpdata <appname> --format json --indent 4 > data.json`
-* While done with the setup and was loading the data, I encountered some errors (some permission issues). Turned out it was because I didn't create a admin user for the application.
+* While done with the setup and was loading the data, I encountered some errors (some permission issues). Turned out it was because I didn't create an admin user for the application.
 * Also, to be able to restore data to all tables, you need to ensure the DB user has all priviledges
 
 ----------------------------------------------------------------------------------------------

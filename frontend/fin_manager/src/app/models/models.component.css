@@ -1,0 +1,82 @@
+/*  */
+#main-window {
+    margin: 5px 150px;
+}
+
+
+.main {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.components {
+    border: 0.5px solid rgb(177, 167, 167);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    height: 100px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.components:hover {
+    box-shadow: 1px 2px 0.1px 2px rgb(146, 137, 137);
+    transition: 500ms ease-in;
+}
+
+
+#budget {
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+#expense {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    color: brown;
+}
+
+#income {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    color: rgb(54, 160, 98);
+}
+
+.income{
+    background-color: rgba(209, 204, 204, 0.842);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 420px) {
+    #main-window {
+        margin: 5px 15px;
+    }
+
+    .main {
+        flex-direction: column;
+    }
+    .components{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #main-window {
+        margin: 5px 15px;
+    }
+
+    .main {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .components {
+        width: 100%;
+    }
+}

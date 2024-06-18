@@ -37,7 +37,7 @@ class Income(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
     amount = models.DecimalField(decimal_places=2, max_digits=15, default=0.00)
     source = models.CharField(max_length=64, choices=INCOME_SOURCE, default="NONE")
-    date = models.DateField(auto_now_add=True)
+    date = models.DateField(default=timezone.now)
 
     def __str__(self):
         return str(self.income_id)
@@ -51,7 +51,6 @@ class Income(models.Model):
         ordering = ['date']
         get_latest_by = 'date'
 
-
     def get_absolute_url(self):
         return f"/income.updelete/{self.income_id}"
 
@@ -62,7 +61,7 @@ class Expense(models.Model):
     amount = models.DecimalField(decimal_places=2, max_digits=15, default=0.00)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     item_name = models.CharField(max_length=256, null=True, help_text="Enter transaction (eg. egg, mortgage)")
-    date_incurred = models.DateField(auto_now_add=True)
+    date_incurred = models.DateField(default=timezone.now)
     description = models.TextField()
 
     def __str__(self) -> str:
