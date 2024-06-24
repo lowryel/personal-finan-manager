@@ -27,7 +27,10 @@ export class UserComponent {
       (response) => {
         // Handle successful login
         console.log(response);
-        localStorage.setItem("token", response["access"])
+        console.log(response.access);
+        
+        localStorage.setItem("token", response.access)
+        this.loginService.currentUser.set(response.access)
         this.route.navigateByUrl("/")
       },
       (error) => {

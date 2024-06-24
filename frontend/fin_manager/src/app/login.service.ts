@@ -1,7 +1,7 @@
-import { Injectable } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { User } from './user';
-import { map, Observable } from 'rxjs';
+import { map, Observable, tap } from 'rxjs';
 import { JwtHelperService } from '@auth0/angular-jwt';
 
 @Injectable({
@@ -12,17 +12,22 @@ export class LoginService {
 
   constructor(private http: HttpClient) {}
 
+  currentUser = signal<User | undefined | null>(undefined);
+
   loginApp(credentials: { username: string; password: string }): Observable<any> {
     return this.http.post(`${this.apiUrl}/apiv1/user/token/`, credentials).pipe(
-      map((response: any) => {
+      tap((response: any) => {
         // Store the JWT token in local storage or another secure storage
-        localStorage.setItem('token', response.access);
+          if (response && response.token) {
+            localStorage.setItem('token', response.access);
+          }
+          console.log("new Response", response);
+          
         // You may also want to store the refresh token if provided
-        localStorage.setItem('refreshToken', response.refresh);
+        // localStorage.setItem('refreshToken', response.refresh);
         return response;
       })
     );
-
 
     }
   // get all incomes

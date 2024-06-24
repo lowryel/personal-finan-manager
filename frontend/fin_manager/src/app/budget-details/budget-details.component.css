@@ -1,0 +1,12 @@
+.table-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+

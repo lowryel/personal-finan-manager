@@ -1,13 +1,14 @@
 import { Component, Inject, input, Input, OnInit, output } from '@angular/core';
 import { FinappService } from '../finapp.service';
 import { IncomeObject } from '../income';
+import { RouterLink } from '@angular/router';
 import { NgFor } from '@angular/common';
 import { LoginService } from '../login.service';
 
 @Component({
   selector: 'app-models',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor, RouterLink],
   templateUrl: './models.component.html',
   styleUrl: './models.component.css'
 })

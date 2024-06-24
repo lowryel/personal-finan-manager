@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .table-space {
+        margin: 10px 50px;
+        padding: 30px;
+        width: auto;
+        border: 1px solid rgb(133, 54, 54);
+
+    }
+
+    .table-spa {
+        padding: 10px 50px;
+        padding: 10px;
+        border: 1px solid rgb(226, 216, 216);
+    }
+    .table-data {
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .income-entry{
+        background-color: rgb(199, 214, 209);
+    }
+</style>
+<body>
+    <p>income-details works!</p>
+    <div class="table-data">
+        <table>
+
+            <tr class="table-space">
+                <th class="table-spa">Amount</th>
+                <th class="table-spa">Source</th>
+                <th class="table-spa">Date</th>
+            </tr>
+            <div *ngFor = "let income of allIncome" class="income-entry">
+                <tr class="table-space">
+                    <td class="table-spa">{{income.amount}}</td>
+                    <td class="table-spa">{{income.source}}</td>
+                    <td class="table-spa">{{income.date}}</td>
+                    <button>delete</button>
+                </tr>
+            </div>
+        </table>
+    </div>
+</body>
+</html>

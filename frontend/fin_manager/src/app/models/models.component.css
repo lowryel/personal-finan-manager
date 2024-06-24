@@ -31,6 +31,7 @@
     display: block;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 #expense {
@@ -38,6 +39,7 @@
     justify-content: center;
     align-items: center;
     color: brown;
+    position: relative;
 }
 
 #income {
@@ -45,6 +47,18 @@
     justify-content: center;
     align-items: center;
     color: rgb(54, 160, 98);
+    position: relative;
+}
+#link{
+    background-color: aqua;
+    border: 2px red;
+    width: 50px;
+    height: 20px;
+    display: flex;
+    justify-content: end;
+    position: relative;
+    right: -80px;
+    bottom: 0;
 }
 
 .income{
