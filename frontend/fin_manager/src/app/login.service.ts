@@ -1,4 +1,4 @@
-import { Injectable, signal } from '@angular/core';
+import { ErrorHandler, Injectable, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { User } from './user';
 import { map, Observable, tap } from 'rxjs';
@@ -23,6 +23,7 @@ export class LoginService {
           }
           console.log("new Response", response);
           
+          
         // You may also want to store the refresh token if provided
         // localStorage.setItem('refreshToken', response.refresh);
         return response;
@@ -34,6 +35,13 @@ export class LoginService {
   getIncome(): Observable<any>{
     return this.http.get(`${this.apiUrl}/apiv1/inc/`)
   }
+
+  // get all incomes
+  deleteIncome(income_id:string): Observable<any>{
+    return this.http.delete(`${this.apiUrl}/apiv1/inc/${income_id}`)
+  }
+
+
 
   // get all incomes
   getExpenditure(): Observable<any>{

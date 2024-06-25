@@ -23,13 +23,17 @@ section{
 
 @media screen and (max-width: 600px){
     .nav-bar {
-        margin: 5px;
+        margin: 0;
         align-items: end;
         background-color: rgb(165, 179, 179);
     }
     ul.nav-elements{
-        margin: 20px;
+        margin: 10px;
         overflow: scroll;
         scroll-behavior: smooth;
+    }
+
+    section {
+        margin: 0;
     }
 }

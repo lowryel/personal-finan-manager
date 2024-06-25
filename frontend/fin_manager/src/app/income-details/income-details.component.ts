@@ -11,15 +11,14 @@ import { NgFor } from '@angular/common';
 })
 export class IncomeDetailsComponent {
   public allIncome:any;
-  constructor(private login:LoginService) { }
+  constructor(private income:LoginService) { }
   ngOnInit() {
-    console.log('IncomeDetailsComponent');
     this.loadIncome()
   }
 
   // get all income 
   loadIncome() {
-    this.login.getIncome().subscribe((res:any)=>{
+    this.income.getIncome().subscribe((res:any)=>{
       console.log(res["results"]);
       for (let i = 0; i < res["results"].length; i++) {
         console.log(res["results"][i].amount)
@@ -28,5 +27,18 @@ export class IncomeDetailsComponent {
       this.allIncome
       console.log(`Current Total Income: ${this.allIncome}`);
     })
+  }
+  deleteIncome(income_id:string){
+    console.log(income_id);
+    
+    this.income.deleteIncome(income_id).subscribe((res:any) => {
+      console.log("Delete response expected: ", res);
+        // Remove the deleted income from the local array
+        this.allIncome = this.allIncome.filter((income:any) => income.id !== income_id);
+    })
+,
+    (error: any) => {
+      console.error('Error deleting income:', error);
+    }
   }
 }

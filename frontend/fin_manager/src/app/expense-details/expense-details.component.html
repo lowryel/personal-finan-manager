@@ -6,53 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<style>
-    .table-space {
-        margin: 10px 50px;
-        padding: 10px;
-
-        border: 1px solid gray;
-
-    }
-
-    .table-spa {
-        padding: 10px 50px;
-        padding: 10px;
-        border: 1px solid rgb(226, 216, 216);
-    }
-
-    .table-data {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-</style>
 
 <body>
-    <p>income-details works!</p>
+    <p>allExpense-details works!</p>
     <div class="table-data">
         <table>
-
             <tr class="table-space">
-                <th class="table-spa">Amount</th>
-                <th class="table-spa">Item Name</th>
-                <th class="table-spa">Date</th>
-                <th class="table-spa">Description</th>
+                <th>Date</th>
+                <th>Item Name</th>
+                <th>Amount</th>
+                <th>Category</th>
+                <!-- <th>Description</th> -->
+                <th>Delete</th>
             </tr>
-            <tr class="table-space">
-                <td class="table-spa">Alfreds Futterkiste</td>
-                <td class="table-spa">Maria Anders</td>
-                <td class="table-spa">Germany</td>
-                <td class="table-spa">Germany</td>
-                <button>delete</button>
-            </tr>
-            <tr class="table-space">
-                <td class="table-spa">Centro comercial Moctezuma</td>
-                <td class="table-spa">Francisco Chang</td>
-                <td class="table-spa">Mexico</td>
-                <td class="table-spa">Mexico</td>
-                <button>delete</button>
-            </tr>
+            <div *ngFor="let expense of allExpense" class="allExpense-entry">
+                <tr class="table-space">
+                    <td>{{expense.date_incurred}}</td>
+                    <td>{{expense.item_name}}</td>
+                    <td>{{expense.amount}}</td>
+                    <td>{{expense.category}}</td>
+                    <!-- <td>{{expense.description}}</td> -->
+                    <button
+                        style="background-color: rgb(250, 124, 124);padding: 10px; border: none; border-radius: 0 8px 8px 0;cursor: pointer;">delete</button>
+                </tr>
+            </div>
         </table>
     </div>
 </body>

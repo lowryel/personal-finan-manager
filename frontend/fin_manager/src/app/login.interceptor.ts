@@ -1,14 +1,13 @@
 import { HttpInterceptorFn } from '@angular/common/http';
 
+// set interceptorto pass auth token to all protected request endpoints
 export const loginInterceptor: HttpInterceptorFn = (req, next) => {
-  console.log('Interceptor is being called');
   const token = localStorage.getItem('token');
   
   if (token) {
     const clonedReq = req.clone({
-      setHeaders: { Authorization: `Bearer ${token}` }
+      setHeaders: { Authorization: `Bearer ${token}` } // set authorization token header 
     });
-    console.log('Token added to request');
     return next(clonedReq);
   }
   

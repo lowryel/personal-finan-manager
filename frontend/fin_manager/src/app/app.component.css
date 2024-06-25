@@ -3,42 +3,10 @@
     margin: 5px 150px;
 }
 
-/* 
-.main{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+
+@media screen and (max-width:600px){
+    #main-window{
+        margin: 5px;
+    }
 }
 
-.components{
-    border: 2px solid black;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    height: 150px;
-    margin: 20px;
-}
-
-#budget {
-    display: block;
-    justify-content: center;
-    align-items: center;
-}
-
-#expense {
-    display: block;
-    justify-content: center;
-    align-items: center;
-    color: brown;
-}
-
-#income {
-    display: block;
-    justify-content: center;
-    align-items: center;
-    color: rgb(54, 160, 98);
-}
-
-
- */
