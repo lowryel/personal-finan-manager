@@ -180,8 +180,8 @@ ACCOUNT_EMAIL_VERIFICATION = 'none'  # disable sending verification email on reg
 
 SIMPLE_JWT = {
     "AUTH_HEADER_TYPES": ("Bearer",),
-    "ACCESS_TOKEN_LIFETIME": datetime.timedelta(minutes=10),
-    "REFRESH_TOKEN_LIFETIME": datetime.timedelta(hours=24),
+    "ACCESS_TOKEN_LIFETIME": datetime.timedelta(hours=24),
+    "REFRESH_TOKEN_LIFETIME": datetime.timedelta(days=30),
 }
 
 USE_JWT=True

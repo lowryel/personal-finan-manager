@@ -12,8 +12,13 @@
     margin: 10px;
  }
 
+ .nav-elements a.active {
+    color: green;
+ }
+
+
  .nav-elements a:hover {
-    text-decoration: underline rgb(156, 170, 156) 2px;
+    background-color: rgb(196, 226, 226);
     transition: 300ms ease-in;
  }
 

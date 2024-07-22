@@ -31,7 +31,7 @@ export class UserComponent {
         
         localStorage.setItem("token", response.access)
         this.loginService.currentUser.set(response.access)
-        this.route.navigateByUrl("/")
+        this.route.navigateByUrl("/dashboard")
       },
       (error) => {
         // Handle login error

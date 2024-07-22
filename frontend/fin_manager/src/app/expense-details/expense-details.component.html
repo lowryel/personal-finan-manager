@@ -8,28 +8,70 @@
 </head>
 
 <body>
-    <p>allExpense-details works!</p>
+    <div style="display: flex; justify-content: center; align-items: center;">
+        <h1>Expense Details</h1>
+    </div>
     <div class="table-data">
-        <table>
+        <!-- <table>
             <tr class="table-space">
                 <th>Date</th>
                 <th>Item Name</th>
                 <th>Amount</th>
                 <th>Category</th>
-                <!-- <th>Description</th> -->
+                <th>Description</th> 
                 <th>Delete</th>
-            </tr>
-            <div *ngFor="let expense of allExpense" class="allExpense-entry">
+            </tr> -->
+            <!-- <div *ngFor="let expense of allExpense" class="allExpense-entry">
                 <tr class="table-space">
                     <td>{{expense.date_incurred}}</td>
                     <td>{{expense.item_name}}</td>
                     <td>{{expense.amount}}</td>
-                    <td>{{expense.category}}</td>
+                    <td>{{expense.category}}</td> -->
                     <!-- <td>{{expense.description}}</td> -->
-                    <button
+                    <!-- <button (click)="deleteExpense(expense.expense_id)"
                         style="background-color: rgb(250, 124, 124);padding: 10px; border: none; border-radius: 0 8px 8px 0;cursor: pointer;">delete</button>
                 </tr>
             </div>
+        </table> -->
+        <table mat-table [dataSource]="allExpense">
+            <!-- Position Column -->
+            <ng-container matColumnDef="date_incurred">
+                <th mat-header-cell *matHeaderCellDef> Date </th>
+                <td mat-cell *matCellDef="let element"> {{element.date_incurred}} </td>
+            </ng-container>
+        
+            <!-- Name Column -->
+            <ng-container matColumnDef="item_name">
+                <th mat-header-cell *matHeaderCellDef> Item Name </th>
+                <td mat-cell *matCellDef="let element"> {{element.item_name}} </td>
+            </ng-container>
+        
+            <!-- Weight Column -->
+            <ng-container matColumnDef="amount">
+                <th mat-header-cell *matHeaderCellDef> Amount </th>
+                <td mat-cell *matCellDef="let element"> {{element.amount}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="category">
+                <th mat-header-cell *matHeaderCellDef> Category </th>
+                <td mat-cell *matCellDef="let element"> {{element.category}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="description">
+                <th mat-header-cell *matHeaderCellDef> Description </th>
+                <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="expense_id">
+                <th mat-header-cell *matHeaderCellDef> Delete </th>
+                <td mat-cell *matCellDef="let element"><button (click)="deleteExpense(element.expense_id)"
+                        style="background-color: rgb(250, 124, 124);padding: 10px; border: none; border-radius: 0 8px 8px 0;cursor: pointer;">delete</button>
+                </td>
+            </ng-container>
+        
+            <tr mat-header-row *matHeaderRowDef="['date_incurred', 'item_name', 'amount', 'category', 'description', 'expense_id']"></tr>
+            <tr mat-row *matRowDef="let row; columns: ['date_incurred', 'item_name', 'amount', 'category', 'description', 'expense_id']"></tr>
+        
         </table>
     </div>
 </body>

@@ -3,10 +3,17 @@
     margin: 5px 150px;
 }
 
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 .main {
-    display: flex;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -19,11 +26,25 @@
     height: 100px;
     margin: 10px;
     border-radius: 5px;
+    background-color: rgb(213, 236, 228);
 }
+
 
 .components:hover {
     box-shadow: 1px 2px 0.1px 2px rgb(146, 137, 137);
     transition: 500ms ease-in;
+}
+
+
+.charts {
+    border: 0.5px solid rgb(214, 211, 211);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    height: 55vh;
+    margin: 10px;
+    border-radius: 5px;
 }
 
 
@@ -69,23 +90,28 @@
 
 @media screen and (max-width: 420px) {
     #main-window {
-        margin: 5px 15px;
+        margin: 5px;
     }
 
     .main {
         flex-direction: column;
+        display: block;
     }
     .components{
-        width: 100%;
+        margin: 0;
+    }
+    .charts {
+        margin: 0;
     }
 }
 
 @media screen and (max-width: 1200px) {
     #main-window {
-        margin: 5px 15px;
+        margin: 5px ;
     }
 
     .main {
+        display: block;
         justify-content: center;
         align-items: center;
     }

@@ -1,6 +1,4 @@
-import { Component, Inject, input, Input, OnInit, output } from '@angular/core';
-import { FinappService } from '../finapp.service';
-import { IncomeObject } from '../income';
+import { Component, Input, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { NgFor } from '@angular/common';
 import { LoginService } from '../login.service';
@@ -72,6 +70,12 @@ export class ModelsComponent implements OnInit {
   loadBudget() {
     this.login.getBudget().subscribe((res:any)=>{
       console.log((res["results"]));
+      if (res["results"].length == 0){
+        this.totalBudget = 0
+        console.log("total budget is: ");
+        
+        return
+      }
       this.totalBudget += parseFloat(res["results"][0].total_budget)
       console.log(`Current Total Budget: ${this.totalBudget}`);
     })

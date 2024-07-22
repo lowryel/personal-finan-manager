@@ -29,7 +29,7 @@ class IncomeSerializer(serializers.ModelSerializer):
 class ExpenseSerializer(serializers.ModelSerializer):
     user = serializers.StringRelatedField(read_only=True)
     expense_id = serializers.StringRelatedField(read_only=True)
-    category = serializers.StringRelatedField()
+    category= Category()
     class Meta:
         model = Expense
         fields = ["expense_id", "user", "amount", "date_incurred", "description", "category", "item_name"]
@@ -37,8 +37,8 @@ class ExpenseSerializer(serializers.ModelSerializer):
     def save(self, **kwargs):
         return super().save(**kwargs)
 
-    def get_category(self):
-        return self.category.name
+    def get_category(self, obj):
+        return obj.category.name
     
     # def get_user_mod(self, obj):
     #     return obj.user.username

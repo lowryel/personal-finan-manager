@@ -1,12 +1,12 @@
 <section>
     <div class="nav-bar">
-        <ul  class="nav-elements">
-            <a routerLink="/">About</a>
-            <a href="/">Contact</a>
-            <a href="/">Services</a>
-            <a routerLink="/login">Login</a>
-            <a href="/">Signup</a>
-            <a href="/">Logout</a>
+        <ul class="nav-elements">
+            <a routerLink="/dashboard" routerLinkActive="active">About</a>
+            <a routerLink="/" routerLinkActive="active">Services</a>
+            <a routerLink="/" routerLinkActive="active">Login</a>
+            <a routerLink="/register" routerLinkActive="active">Signup</a>
+            <button style="background-color: rgb(172, 153, 128); border: none; padding: 8px 12px; cursor: pointer;" 
+            (click)="logout()">Logout</button>
         </ul>
     </div>
 </section>
