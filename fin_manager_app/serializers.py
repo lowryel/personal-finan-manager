@@ -26,6 +26,14 @@ class IncomeSerializer(serializers.ModelSerializer):
         return super().get_validators()
 
 
+class MonthlyIncomeSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = MonthlyIncome
+        fields='__all__'
+
+
+
 class ExpenseSerializer(serializers.ModelSerializer):
     user = serializers.StringRelatedField(read_only=True)
     expense_id = serializers.StringRelatedField(read_only=True)
@@ -42,6 +50,15 @@ class ExpenseSerializer(serializers.ModelSerializer):
     
     # def get_user_mod(self, obj):
     #     return obj.user.username
+
+
+# serialize monthly expense totals
+class MonthlyExpenseSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = MonthlyExpense
+        fields = "__all__"
+
 
 
 class BudgetSerializer(serializers.ModelSerializer):

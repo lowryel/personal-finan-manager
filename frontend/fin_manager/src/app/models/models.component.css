@@ -45,6 +45,7 @@ body{
     height: 55vh;
     margin: 10px;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 
@@ -102,6 +103,9 @@ body{
     }
     .charts {
         margin: 0;
+    }
+    #MyChart {
+        width: auto;
     }
 }
 

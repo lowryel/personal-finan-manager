@@ -46,6 +46,20 @@ export class LoginService {
     )
   }
 
+  // get all incomings for the month
+  getMonthlyTotalIncome(): Observable<any>{
+    return this.http.get(`${this.apiUrl}/apiv1/monthly_income/`).pipe(
+      tap(res=>{
+        res
+      }),
+      catchError(this.handleError)
+    )
+  }
+
+
+
+
+
   // delete income
   deleteIncome(income_id:string): Observable<any>{
     return this.http.delete(`${this.apiUrl}/apiv1/income.updelete/${income_id}`).pipe(
@@ -66,7 +80,20 @@ export class LoginService {
       catchError(this.handleError)
     )
   }
-  
+
+  // get all expenses for the month
+  getMonthlyTotalExpense(): Observable<any>{
+    return this.http.get(`${this.apiUrl}/apiv1/monthly_expense/`).pipe(
+      tap(res=>{
+        res
+      }),
+      catchError(this.handleError)
+    )
+  }
+
+
+
+
   // NEW: delete expense
   deleteExpense(expense_id:string): Observable<any>{
     return this.http.delete(`${this.apiUrl}/apiv1/expense.updelete/${expense_id}`).pipe(

@@ -10,7 +10,8 @@
 }
 
 .table-data {
-    display: flex;
+    display: grid;
+    grid-template-columns: 2.5fr 0.5fr;
     justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
@@ -31,6 +32,10 @@ th {
     padding: 10px;
 }
 
+.charts {
+    height: 50vh;
+}
+
 @media screen and (max-width: 600px){
     body{
         font-size: 14px;
@@ -38,6 +43,11 @@ th {
     .table-space {
         margin: 0;
         width: 100%;
+    }
+    .table-data {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
     }
 }
 

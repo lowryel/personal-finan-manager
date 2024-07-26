@@ -1,12 +1,12 @@
-from django.db import models
-from django.contrib.auth.models import AbstractUser, User, AbstractBaseUser
+from django.db import models  # type: ignore
+from django.contrib.auth.models import AbstractUser, User, AbstractBaseUser  # type: ignore
 import uuid
 
-from django.db.models import Sum
+from django.db.models import Sum  # type: ignore
 
-from django.db.models.signals import post_save, post_delete, pre_save
-from django.dispatch import receiver
-from django.utils import timezone
+from django.db.models.signals import post_save, post_delete, pre_save  # type: ignore
+from django.dispatch import receiver # type: ignore
+from django.utils import timezone  # type: ignore
 
 
 # Create your models here.
@@ -53,6 +53,44 @@ class Income(models.Model):
 
     def get_absolute_url(self):
         return f"/income.updelete/{self.income_id}"
+    
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
+
+
+class MonthlyIncome(models.Model):
+    owner = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
+    date = models.DateField(default=timezone.now)
+    total_amount = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
+
+    @staticmethod
+    def update_monthly_total(year, month, owner):
+        total_income = Income.objects.filter(user=owner, date__year=year, date__month=month).aggregate(Sum('amount'))['amount__sum'] or 0
+
+        monthly_income, created = MonthlyIncome.objects.update_or_create(
+            owner=owner,
+            date__year=year,
+            date__month=month,
+            defaults={"total_amount": total_income},
+        )
+        return monthly_income
+
+
+def update_monthly_income(sender, instance, **kwargs):
+    year = instance.date.year
+    month = instance.date.month
+    MonthlyIncome.update_monthly_total(year, month, instance.user)
+
+
+@receiver(post_save, sender=Income)
+def update_monthly_income_on_save(sender, instance, created, **kwargs):
+    # print(created)
+    # if created:
+        update_monthly_income(sender, instance, **kwargs)
+
+@receiver(post_delete, sender=Income)
+def update_monthly_budget_report_on_income_delete(sender, instance, **kwargs):
+    update_monthly_income(sender, instance, **kwargs)
 
 
 class Expense(models.Model):
@@ -73,6 +111,50 @@ class Expense(models.Model):
 
     def get_absolute_url(self):
         return f"/expense.updelete/{self.income_id}"
+
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
+
+
+class MonthlyExpense(models.Model):
+    owner = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
+    date = models.DateField(default=timezone.now)
+    total_amount = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
+
+    @staticmethod
+    def update_monthly_total(year, month, owner):
+        total_expense = (
+            Expense.objects.filter(
+                user=owner, date_incurred__year=year, date_incurred__month=month
+            ).aggregate(Sum("amount"))["amount__sum"]
+            or 0.00
+        )
+
+        monthly_expense, created = MonthlyExpense.objects.update_or_create(
+            owner=owner.id,
+            date__year=year,
+            date__month=month,
+            defaults={"total_amount": total_expense},
+        )
+        return monthly_expense
+
+
+def update_monthly_expense(sender, instance, **kwargs):
+    year = instance.date_incurred.year
+    month = instance.date_incurred.month
+    MonthlyExpense.update_monthly_total(year, month, instance.user)
+
+
+@receiver(post_save, sender=Expense)
+def update_monthly_expense_on_save(sender, instance, created, **kwargs):
+    # print(created)
+    # if created:
+        update_monthly_expense(sender, instance, **kwargs)
+
+
+@receiver(post_delete, sender=Expense)
+def update_monthly_budget_report_on_expense_delete(sender, instance, **kwargs):
+    update_monthly_expense(sender, instance, **kwargs)
 
 
 BUDGET_POSITIONS = (

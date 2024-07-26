@@ -73,6 +73,9 @@
             <tr mat-row *matRowDef="let row; columns: ['date_incurred', 'item_name', 'amount', 'category', 'description', 'expense_id']"></tr>
         
         </table>
+        <div class="charts">
+            <app-expense-chart></app-expense-chart>
+        </div>
     </div>
 </body>
 

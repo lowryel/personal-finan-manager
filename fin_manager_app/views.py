@@ -15,7 +15,7 @@ from fin_manager_app.utils import get_total_income_for_month, get_total_expense_
 
 from fin_manager_app.serializers import (
         IncomeSerializer, ExpenseSerializer, 
-        BudgetSerializer, CategorySerializer,
+        BudgetSerializer, CategorySerializer, MonthlyExpenseSerializer, MonthlyIncomeSerializer,
     )
 # Create your views here.
 
@@ -50,10 +50,28 @@ class IncomeAPIView(generics.ListCreateAPIView):
         return Income.objects.filter(user=request.user).aggregate(Sum("amount"))
 
 
+class MonthlyIncomeRetrieveView(generics.ListAPIView):
+    serializer_class = MonthlyIncomeSerializer
+    queryset = MonthlyIncome.objects.all().order_by("-date")
+
+    permission_classes = [IsAuthenticated]
+    authentication_classes = [
+        SessionAuthentication,
+        TokenAuthentication,
+        JWTAuthentication,
+    ]
+    # filter queryset by user (visible to the owner)
+    def get_queryset(self):
+        return self.queryset.filter(
+            owner=self.request.user,
+            # year=timezone.now().year,
+            # month=timezone.now().month,
+        )
+
+
 class IncomeRetrieveUpdateDeleteAPIView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = IncomeSerializer
     queryset = Income.objects.all().order_by("-date")
-    lookup_name="income_id"
     permission_classes = [IsAuthenticated]
     authentication_classes = [
         SessionAuthentication,
@@ -97,6 +115,24 @@ class ExpenseAPIView(generics.ListCreateAPIView):
             date_incurred__month=timezone.now().month,
         )
         # return self.queryset.filter(user=self.request.user)
+
+
+class MonthlyExpenseRetrieveView(generics.ListAPIView):
+    serializer_class = MonthlyExpenseSerializer
+    queryset = MonthlyExpense.objects.all().order_by("-date")
+
+    permission_classes = [IsAuthenticated]
+    authentication_classes = [
+        SessionAuthentication,
+        TokenAuthentication,
+        JWTAuthentication,
+    ]
+
+    # filter queryset by user (visible to the owner)
+    def get_queryset(self):
+        return self.queryset.filter(
+            owner=self.request.user,
+        )
 
 
 class ExpenseRetrieveUpdateDeleteAPIView(generics.RetrieveUpdateDestroyAPIView):

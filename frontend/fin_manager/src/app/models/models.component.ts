@@ -2,11 +2,12 @@ import { Component, Input, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { NgFor } from '@angular/common';
 import { LoginService } from '../login.service';
+import { BudgetChartComponent } from '../budget-chart/budget-chart.component';
 
 @Component({
   selector: 'app-models',
   standalone: true,
-  imports: [NgFor, RouterLink],
+  imports: [NgFor, RouterLink, BudgetChartComponent],
   templateUrl: './models.component.html',
   styleUrl: './models.component.css'
 })
@@ -15,6 +16,7 @@ export class ModelsComponent implements OnInit {
   public allIncome:number=0;
   public allExpenses:number=0;
   public totalBudget:number=0;
+
 
   constructor(private login: LoginService) { }
 

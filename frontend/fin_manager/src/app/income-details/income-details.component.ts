@@ -7,17 +7,24 @@ import { CommonModule } from '@angular/common';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatButtonModule } from '@angular/material/button';
+import { IncomeChartComponent } from '../income-chart/income-chart.component';
 
 
 @Component({
   selector: 'app-income-details',
   standalone: true,
-  imports: [NgFor, FormsModule, CommonModule, MatTableModule, MatPaginatorModule, MatButtonModule, ],
+  imports: [
+    NgFor, FormsModule, CommonModule, 
+    MatTableModule, MatPaginatorModule, 
+    MatButtonModule, IncomeChartComponent
+  ],
+  
   templateUrl: './income-details.component.html',
   styleUrl: './income-details.component.css'
 })
 export class IncomeDetailsComponent {
   public allIncome:any;
+  public incchart:any;
   constructor(private income:LoginService, private cd: ChangeDetectorRef) { }
   ngOnInit() {
     this.loadIncome()
@@ -40,6 +47,7 @@ export class IncomeDetailsComponent {
       }
     })
   }
+
   deleteIncome(income_id:string){
     console.log(income_id);
     this.income.deleteIncome(income_id).subscribe(() => {
@@ -52,4 +60,6 @@ export class IncomeDetailsComponent {
       console.error('Error deleting income:', error);
     }
   }
+
+
 }

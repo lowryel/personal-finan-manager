@@ -3,12 +3,13 @@ import { LoginService } from '../login.service';
 import { NgFor } from '@angular/common';
 
 import {MatTableModule} from '@angular/material/table';
+import { ExpenseChartComponent } from '../expense-chart/expense-chart.component';
 
 
 @Component({
   selector: 'app-expense-details',
   standalone: true,
-  imports: [NgFor, MatTableModule],
+  imports: [NgFor, MatTableModule, ExpenseChartComponent],
   templateUrl: './expense-details.component.html',
   styleUrl: './expense-details.component.css'
 })

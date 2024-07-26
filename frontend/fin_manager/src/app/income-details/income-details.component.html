@@ -67,6 +67,9 @@
             <tr mat-row *matRowDef="let row; columns: ['date', 'source', 'amount', 'income_id']"></tr>
             
         </table>
+        <div class="charts">
+            <app-income-chart></app-income-chart>
+        </div>
     </div>
     <mat-paginator [length]="6"
           [pageSize]="5"

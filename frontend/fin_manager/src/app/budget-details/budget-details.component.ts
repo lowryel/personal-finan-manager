@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-budget-details',
   standalone: true,
@@ -8,5 +9,8 @@ import { Component } from '@angular/core';
   styleUrl: './budget-details.component.css'
 })
 export class BudgetDetailsComponent {
+
+  ngOnInit(){
+  }
 
 }
