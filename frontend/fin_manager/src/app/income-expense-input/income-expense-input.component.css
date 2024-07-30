@@ -16,9 +16,38 @@
     text-align: center;
 }
 
-.header{
+.header {
     display: grid;
     place-items: center;
+}
+
+.header div {
+    animation: infinite;
+    animation-name: colgroup;
+    animation-duration: 1000ms;
+}
+
+
+@keyframes colgroup {
+    0% {
+        background-color: white;
+        transform: scale(10%);
+    }
+
+    50% {
+        background-color: black;
+        transform: scale(50%);
+    }
+
+    75% {
+        background-color: aquamarine;
+        transform: scale(75%);
+    }
+
+    100% {
+        background-color: brown;
+        transform: scale(100%);
+    }
 }
 
 form input {
@@ -40,10 +69,15 @@ form button {
     text-align: center;
 }
 
+.form-co button{
+    margin-top: 5px;
+}
+
 @media screen and (max-width: 600px) {
     .login-page {
         margin: 0 20px;
     }
+
     .main {
         margin: 0 10px;
     }

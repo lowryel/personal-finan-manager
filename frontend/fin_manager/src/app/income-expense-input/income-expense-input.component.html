@@ -1,0 +1,32 @@
+<section class="login-page">
+    <div class="main">
+        <div class="header">
+            <h1>Add Income</h1>
+            <div
+                style="display: grid; place-items: center; height: 50px; width: 50px; background-color: antiquewhite; border-radius: 100%; border: 1px solid black; margin-bottom: 20px;">
+            </div>
+        </div>
+        <div class="form-field">
+            <form action="" class="form-co">
+                <label for="perror">{{ perror }}</label><br>
+                <label for="amount">Amount</label>
+                <input type="number" name="amount" id="amount" placeholder="Amount"
+                    [(ngModel)]="object.amount"><br>
+                <label for="date">Date</label>
+                <input type="date" name="date" id="date" placeholder="date" [(ngModel)]="object.date"><br>
+                <label for="source">Source</label>
+                <select style="padding: 10px;background-color: rgb(194, 204, 202);" [(ngModel)]="object.source" name="source" id="source">
+                    <option value="SALARY">Salary</option><br>
+                    <option value="ROI">Return on Investment</option>
+                    <option value="GIFTS">Gifts</option>
+                    <option value="OTHERS">Others</option>
+                    <option value="LOAN">Loan</option>
+                </select>
+                <button (click)="incomeInput()">Submit</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+

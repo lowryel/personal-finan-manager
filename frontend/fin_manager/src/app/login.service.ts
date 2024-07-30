@@ -36,6 +36,18 @@ export class LoginService {
   }
 
 
+  incomeEntry(object: { amount: number; source: string, date: string }): Observable<any> {
+    console.log("adding new income", object);
+    return this.http.post(`${this.apiUrl}/apiv1/inc/`, object)
+  }
+
+
+  expenseEntry(object: { item_name: string, amount: number; category: string, date_incurred: any, description:string }): Observable<any> {
+    console.log("adding new expenditure", object);
+    return this.http.post(`${this.apiUrl}/apiv1/exp/`, object)
+  }
+
+
   // get all incomings for the month
   getIncome(): Observable<any>{
     return this.http.get(`${this.apiUrl}/apiv1/inc/`).pipe(
@@ -114,6 +126,20 @@ export class LoginService {
       catchError(this.handleError)
     )
   }
+
+  // get all categories
+  getCategory(): Observable<any>{
+    return this.http.get(`${this.apiUrl}/apiv1/cat/`).pipe(
+      tap(res=>{
+        res
+      }),
+      catchError(this.handleError)
+    )
+  }
+
+
+
+
 
   logout() {
     // Remove the JWT token from storage

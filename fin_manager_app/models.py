@@ -29,7 +29,7 @@ INCOME_SOURCE = (
     ("ROI", "Return on Investment"),
     ("GIFTS", "Gifts"),
     ("OTHERS", "Others"),
-    ("NONE", "None")
+    ("LOAN", "Loan")
 )
 
 class Income(models.Model):
@@ -85,7 +85,7 @@ def update_monthly_income(sender, instance, **kwargs):
 @receiver(post_save, sender=Income)
 def update_monthly_income_on_save(sender, instance, created, **kwargs):
     # print(created)
-    # if created:
+    if created:
         update_monthly_income(sender, instance, **kwargs)
 
 @receiver(post_delete, sender=Income)
@@ -118,7 +118,7 @@ class Expense(models.Model):
 
 class MonthlyExpense(models.Model):
     owner = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
-    date = models.DateField(default=timezone.now)
+    date = models.DateField(null=True)
     total_amount = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
 
     @staticmethod

@@ -66,7 +66,7 @@ class MonthlyIncomeRetrieveView(generics.ListAPIView):
             owner=self.request.user,
             # year=timezone.now().year,
             # month=timezone.now().month,
-        )
+        ).exclude(date__month=timezone.now().month -1 >= timezone.now().month)
 
 
 class IncomeRetrieveUpdateDeleteAPIView(generics.RetrieveUpdateDestroyAPIView):
@@ -203,6 +203,7 @@ class CategoryAPIView(generics.ListCreateAPIView):
         TokenAuthentication,
         JWTAuthentication,
     ]
+
 
 
 class CategoryRetrieveUpdateDeleteAPIView(generics.RetrieveUpdateDestroyAPIView):

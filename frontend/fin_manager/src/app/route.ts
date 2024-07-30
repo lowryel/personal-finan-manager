@@ -1,12 +1,13 @@
 import { Routes } from '@angular/router';
 import { UserComponent } from './user/user.component';
-import { AppComponent } from './app.component';
 import { ModelsComponent } from './models/models.component';
 import { IncomeDetailsComponent } from './income-details/income-details.component';
 import { ExpenseDetailsComponent } from './expense-details/expense-details.component';
 import { BudgetDetailsComponent } from './budget-details/budget-details.component';
 import { RegisterUserComponent } from './register-user/register-user.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ExpenseInputComponent } from './expense-input/expense-input.component';
+import { IncomeExpenseInputComponent } from './income-expense-input/income-expense-input.component';
 
 
 // define a route array as an instance of Routes and declare the endpoints on the components
@@ -45,6 +46,14 @@ const routeConfig: Routes = [
   { path: 'bud/more',
     component: BudgetDetailsComponent,
     title: 'Budget Details'
+  },
+  { path: 'bud/inc',
+    component: IncomeExpenseInputComponent,
+    title: 'Income and Expense Input'
+  },
+  { path: 'bud/exp',
+    component: ExpenseInputComponent,
+    title: 'Income and Expense Input'
   },
   { path: '**',
     component: PageNotFoundComponent, // should always be the last route in the list

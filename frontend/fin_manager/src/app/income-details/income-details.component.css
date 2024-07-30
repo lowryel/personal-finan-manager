@@ -66,6 +66,24 @@ section {
     height: 50vh;
 }
 
+.charts a{
+    display: grid;
+    place-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    text-orientation: upright;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    text-decoration: none;
+    padding: 5px 0;
+}
+.charts a:hover{
+    background-color: rgba(187, 183, 183, 0.699);
+    color: black;
+    transition: ease-out;
+    transition-duration: 200ms;
+}
+
 @media screen and (max-width: 600px) {
     body {
         font-size: 14px;

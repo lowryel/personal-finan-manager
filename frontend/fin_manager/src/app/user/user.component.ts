@@ -2,18 +2,18 @@ import { Component, inject } from '@angular/core';
 // import { RouterLink, RouterOutlet } from '@angular/router';
 import { LoginService } from '../login.service';
 import { FormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'user',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, RouterLink],
   templateUrl: './user.component.html',
   styleUrl: './user.component.css'
 })
 
 export class UserComponent {
-  debugger:any
+  debugger:any;
 
   credentials = {
     username: '',

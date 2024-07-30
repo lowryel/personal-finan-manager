@@ -1,18 +1,25 @@
 <section class="login-page">
     <div class="main">
-        <p>register-user works!</p>
+        <div class="header">
+            <h1>Signup</h1>
+            <div style="display: grid; place-items: center; height: 50px; width: 50px; background-color: antiquewhite; border-radius: 100%; border: 1px solid black; margin-bottom: 20px;"></div>
+        </div>
         <div class="form-field">
             <form action="" class="form-control">
                 <input type="text" name="username" id="user-name" placeholder="Username"
                     [(ngModel)]="credentials.username"><br>
+
                 <input type="text" name="email" id="email" placeholder="Email" 
                     [(ngModel)]="credentials.email"><br>
+
                 <input type="password" name="password1" id="user-password1" placeholder="Password"
                     [(ngModel)]="credentials.password1"><br>
+
                 <input type="password" name="password2" id="user-password2" placeholder="Confirm password" 
                     [(ngModel)]="credentials.password2"><br>
-                <button style="background-color: aqua; border: none; padding: 10px 25px;"
-                    (click)="registerUser()">Login</button>
+
+                <button style="background-color: rgb(2, 2, 2); border: none; padding: 10px 25px;"
+                    (click)="registerUser()">Submit</button>
             </form>
         </div>
     </div>

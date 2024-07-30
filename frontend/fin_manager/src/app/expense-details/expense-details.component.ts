@@ -4,12 +4,13 @@ import { NgFor } from '@angular/common';
 
 import {MatTableModule} from '@angular/material/table';
 import { ExpenseChartComponent } from '../expense-chart/expense-chart.component';
+import { RouterLink } from '@angular/router';
 
 
 @Component({
   selector: 'app-expense-details',
   standalone: true,
-  imports: [NgFor, MatTableModule, ExpenseChartComponent],
+  imports: [NgFor, MatTableModule, ExpenseChartComponent, RouterLink],
   templateUrl: './expense-details.component.html',
   styleUrl: './expense-details.component.css'
 })

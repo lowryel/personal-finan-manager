@@ -1,15 +1,19 @@
 <section class="login-page">
     <div class="main">
-        <p>This is coming from the user Component!</p>
+        <div class="header">
+            <h1>User Login</h1>
+            <div
+                style="display: grid; place-items: center; height: 50px; width: 50px; background-color: antiquewhite; border-radius: 100%; border: 1px solid black; margin-bottom: 20px;">
+            </div>
+        </div>
         <div class="form-field">
-            <form action="" class="form-control">
+            <form action="" class="form-co">
                 <input type="text" name="username" id="user-name" placeholder="Username" [(ngModel)]="credentials.username"><br>
                 <input type="password" name="password" id="user-password" placeholder="Password" [(ngModel)]="credentials.password"><br>
-                <button 
-                    style="background-color: aqua; border: none; padding: 10px 25px;"  
-                    (click)="login()">Login</button>
+                <button (click)="login()">Login</button>
             </form>
         </div>
+        <p>Follow the link and register as a new  <a title="register user" routerLink="/register">Register</a></p>
     </div>
 </section>
 

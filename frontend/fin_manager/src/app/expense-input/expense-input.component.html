@@ -1,0 +1,33 @@
+<section class="login-page">
+    <div class="main">
+        <div class="header">
+            <h1>Add Expense</h1>
+            <div
+                style="display: grid; place-items: center; height: 50px; width: 50px; background-color: antiquewhite; border-radius: 100%; border: 1px solid black; margin-bottom: 20px;">
+            </div>
+        </div>
+        <div class="form-field">
+            <form action="" class="form-co">
+                <label for="perror">{{ perror }}</label><br>
+                <label for="item_name">Item Name</label>
+                <input type="text" name="item_name" id="item_name" placeholder="Item Name" [(ngModel)]="object.item_name"><br>
+                <label for="amount">Amount</label>
+                <input type="number" name="amount" id="amount" placeholder="Amount" [(ngModel)]="object.amount"><br>
+                <label for="date_incurred">Date</label>
+                <input type="date" name="date_incurred" id="date_incurred" placeholder="Date incurred" [(ngModel)]="object.date_incurred"><br>
+
+                <label for="description">Description</label>
+                <input type="text" name="description" id="description" placeholder="Description"
+                    [(ngModel)]="object.description"><br>
+
+
+                <label for="category">Category</label><br>
+                <select  style="padding: 10px;background-color: rgb(194, 204, 202);" [(ngModel)]="object.category" name="category" id="category">
+                    <option *ngFor="let cat of categry" value={{cat.id}}>{{cat.name}}</option>
+                </select>
+                <button (click)="expenseInput()">Submit</button>
+            </form>
+        </div>
+    </div>
+</section>
+
